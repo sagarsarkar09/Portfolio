@@ -25,16 +25,24 @@ function createTodoList() {
   }
 
   function removeTask(task) {
+    
 
   }
 
   function markComplete(task) {
-    for (let i = 0; i < tasks.length; i++) {
-      if (tasks[i].task === task) {
-        tasks[i].iscompleted = true;
-        console.log(`Task marked as completed: ${task}`);
-        return;
-      }
+    // for (let i = 0; i < tasks.length; i++) {
+    //   if (tasks[i].task === task) {
+    //     tasks[i].iscompleted = true;
+    //     console.log(`Task marked as completed: ${task}`);
+    //     return;
+    //   }
+    // }
+    let index = tasks.findIndex(taskItem => taskItem.task === task);
+    if (index !== -1) {
+      tasks[index].iscompleted = true;
+      console.log(`Task marked as completed: ${task}`);
+    } else {
+      console.log(`Task not found: ${task}`);
     }
   }
 
