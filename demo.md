@@ -1,3 +1,0 @@
-# Hello world 
-# Full Name-SAGAR SARKAR 
-# COURSE - FULL STACK ENGINEER 
